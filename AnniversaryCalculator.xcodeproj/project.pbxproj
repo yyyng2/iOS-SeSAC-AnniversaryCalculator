@@ -13,6 +13,7 @@
 		181648F7287E851700022313 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181648F5287E851700022313 /* Main.storyboard */; };
 		181648F9287E851A00022313 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 181648F8287E851A00022313 /* Assets.xcassets */; };
 		181648FC287E851A00022313 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 181648FA287E851A00022313 /* LaunchScreen.storyboard */; };
+		18164904287F626900022313 /* FormattedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18164903287F626900022313 /* FormattedViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		181648F8287E851A00022313 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		181648FB287E851A00022313 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		181648FD287E851A00022313 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18164903287F626900022313 /* FormattedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormattedViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				181648F1287E851700022313 /* SceneDelegate.swift */,
 				181648F3287E851700022313 /* ViewController.swift */,
 				181648F5287E851700022313 /* Main.storyboard */,
+				18164903287F626900022313 /* FormattedViewController.swift */,
 				181648F8287E851A00022313 /* Assets.xcassets */,
 				181648FA287E851A00022313 /* LaunchScreen.storyboard */,
 				181648FD287E851A00022313 /* Info.plist */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				181648F4287E851700022313 /* ViewController.swift in Sources */,
+				18164904287F626900022313 /* FormattedViewController.swift in Sources */,
 				181648F0287E851700022313 /* AppDelegate.swift in Sources */,
 				181648F2287E851700022313 /* SceneDelegate.swift in Sources */,
 			);

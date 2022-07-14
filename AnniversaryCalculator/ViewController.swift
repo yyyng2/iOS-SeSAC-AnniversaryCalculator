@@ -9,22 +9,22 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
-    @IBOutlet var daysOutletCollection: [UILabel]!
-    @IBOutlet weak var years100Label: UILabel!
-    @IBOutlet weak var date100Label: UILabel!
-    @IBOutlet weak var years200Label: UILabel!
-    @IBOutlet weak var date200Label: UILabel!
-    @IBOutlet weak var years300Label: UILabel!
-    @IBOutlet weak var date300Label: UILabel!
-    @IBOutlet weak var years365Label: UILabel!
-    @IBOutlet weak var date365Label: UILabel!
+    @IBOutlet var labelCollection: [UILabel]!
+    @IBOutlet var daysLabelCollection: [UILabel]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        datePicker.locale = Locale(identifier: "en_US")
+        designDatePicker()
         designLabel()
-        
-     
+    }
+    
+    func designDatePicker(){
+        datePicker.locale = Locale(identifier: "en_US")
+        if #available(iOS 14, *) {
+            datePicker.preferredDatePickerStyle = .inline
+        } else {
+            datePicker.preferredDatePickerStyle = .wheels
+        }
     }
     
  
@@ -33,63 +33,67 @@ class ViewController: UIViewController {
         let dateFormmater = DateFormatter()
         dateFormmater.locale = Locale(identifier: "en_US")
         dateFormmater.dateFormat = "MM dd yyyy"
-        dateCalculator()
+//        dateCalculator()
         designLabel()
     }
     
     func designLabel(){
-        for label in daysOutletCollection{
+        for label in labelCollection{
             label.textColor = .red
             label.shadowColor = .magenta
             label.textAlignment = .center
-        
-        
         }
     }
   
-    func dateCalculator(){
-        let day100 = DateComponents(day: 99)
-        let calendar = Calendar.current
-        let d100 = calendar.date(byAdding: day100, to: datePicker.date)
-        let year100formatter = DateFormatter()
-        let day100formatter = DateFormatter()
-        year100formatter.dateFormat = "yyyy"
-        day100formatter.dateFormat = "MM. dd."
-        years100Label.text = year100formatter.string(from: (d100!))
-        date100Label.text = day100formatter.string(from: d100!)
-        
-        let day200 =
-        DateComponents(day:199)
-        let d200 = calendar.date(byAdding: day200, to: datePicker.date)
-        let year200formatter = DateFormatter()
-        let day200formatter = DateFormatter()
-        year200formatter.dateFormat = "yyyy"
-        day200formatter.dateFormat = "MM. dd."
-        years200Label.text = year200formatter.string(from: d200!)
-        date200Label.text = day200formatter.string(from: d200!)
-        
-        let day300 = DateComponents(day:299)
-        let d300 = calendar.date(byAdding: day300, to: datePicker.date)
-        let year300formatter = DateFormatter()
-        let day300formatter = DateFormatter()
-        year300formatter.dateFormat = "yyyy"
-        day300formatter.dateFormat = "MM. dd."
-        years300Label.text = year300formatter.string(from: d300!)
-        date300Label.text = day300formatter.string(from: d300!)
-        
-        let day365 = DateComponents(day:364)
-        let d365 = calendar.date(byAdding: day365, to: datePicker.date)
-        let year365formatter = DateFormatter()
-        let day365formatter = DateFormatter()
-        year365formatter.dateFormat = "yyyy"
-        day365formatter.dateFormat = "MM. dd."
-        years365Label.text = year365formatter.string(from: d365!)
-        date365Label.text = day365formatter.string(from: d365!)
-        
-        
+    func dateCal(_ days: Int, _ textTag: Int){
+        let daysAfter = DateComponents(day: days)
+        let calendar  = Calendar.current
+        let plusDays = calendar.date(byAdding: daysAfter, to: datePicker.date)
+        let daysFormatter = DateFormatter()
+        daysFormatter.dateFormat = "yyyy. \nMM. dd."
+        daysLabelCollection[textTag].text = daysFormatter.string(from: plusDays!)
     }
     
     
+    @IBAction func datePicked(_ sender: UIDatePicker) {
+        dateCal(99, 0)
+        dateCal(199, 1)
+        dateCal(299, 2)
+        dateCal(364, 3)
+    }
+    
+    // 함수를 만들어 간소화
+    //    func dateCalculator(){
+    //        let daysAfter100 = DateComponents(day: 99)
+    //        let calendar = Calendar.current
+    //        let dPlus100 = calendar.date(byAdding: daysAfter100, to: datePicker.date)
+    //        let days100formatter = DateFormatter()
+    //        days100formatter.dateFormat = "yyyy \nMM. dd."
+    //        daysLabelCollection[0].text = days100formatter.string(from: (dPlus100!))
+    //
+    //        let daysAfter200 =
+    //        DateComponents(day:199)
+    //        let dPlus200 = calendar.date(byAdding: daysAfter200, to: datePicker.date)
+    //        let days200formatter = DateFormatter()
+    //        days200formatter.dateFormat = "yyyy \nMM. dd."
+    //        daysLabelCollection[1].text = days200formatter.string(from: dPlus200!)
+    //
+    //        let daysAfter300 = DateComponents(day:299)
+    //        let dPlus300 = calendar.date(byAdding: daysAfter300, to: datePicker.date)
+    //        let days300formatter = DateFormatter()
+    //        days300formatter.dateFormat = "yyyy \nMM. dd."
+    //        daysLabelCollection[2].text = days300formatter.string(from: dPlus300!)
+    //
+    //        let daysAfter365 = DateComponents(day:364)
+    //        let dPlus365 = calendar.date(byAdding: daysAfter365, to: datePicker.date)
+    //        let days365formatter = DateFormatter()
+    //        days365formatter.dateFormat = "yyyy \nMM. dd."
+    //        daysLabelCollection[3].text = days365formatter.string(from: dPlus365!)
+    //
+    //
+    //    }
     
 }
+
+
 
