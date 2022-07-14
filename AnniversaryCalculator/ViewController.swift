@@ -27,16 +27,6 @@ class ViewController: UIViewController {
         }
     }
     
- 
-
-//    @IBAction func datePickerSelected(_ sender: UIDatePicker) {
-//        let dateFormmater = DateFormatter()
-//        dateFormmater.locale = Locale(identifier: "en_US")
-//        dateFormmater.dateFormat = "MM dd yyyy"
-////        dateCalculator()
-//        designLabel()
-//    }
-    
     func designLabel(){
         for label in labelCollection{
             label.textColor = .red
@@ -54,13 +44,14 @@ class ViewController: UIViewController {
         daysLabelCollection[textTag].text = daysFormatter.string(from: plusDays!)
     }
     
-    
     @IBAction func datePicked(_ sender: UIDatePicker) {
         dateCal(99, 0)
         dateCal(199, 1)
         dateCal(299, 2)
         dateCal(364, 3)
     }
+    
+
     
     // 함수를 만들어 간소화
     //    func dateCalculator(){
@@ -91,6 +82,14 @@ class ViewController: UIViewController {
     //        daysLabelCollection[3].text = days365formatter.string(from: dPlus365!)
     //
     //
+    //    }
+    //
+    //    @IBAction func datePickerSelected(_ sender: UIDatePicker) {
+    //        let dateFormmater = DateFormatter()
+    //        dateFormmater.locale = Locale(identifier: "en_US")
+    //        dateFormmater.dateFormat = "MM dd yyyy"
+    //        dateCalculator()
+    //        designLabel()
     //    }
     
 }
