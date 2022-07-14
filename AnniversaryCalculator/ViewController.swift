@@ -29,13 +29,13 @@ class ViewController: UIViewController {
     
  
 
-    @IBAction func datePickerSelected(_ sender: UIDatePicker) {
-        let dateFormmater = DateFormatter()
-        dateFormmater.locale = Locale(identifier: "en_US")
-        dateFormmater.dateFormat = "MM dd yyyy"
-//        dateCalculator()
-        designLabel()
-    }
+//    @IBAction func datePickerSelected(_ sender: UIDatePicker) {
+//        let dateFormmater = DateFormatter()
+//        dateFormmater.locale = Locale(identifier: "en_US")
+//        dateFormmater.dateFormat = "MM dd yyyy"
+////        dateCalculator()
+//        designLabel()
+//    }
     
     func designLabel(){
         for label in labelCollection{
