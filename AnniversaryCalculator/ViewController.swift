@@ -7,15 +7,19 @@
 
 import UIKit
 
+var userDefaults = UserDefaults.standard
+
 class ViewController: UIViewController {
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet var labelCollection: [UILabel]!
     @IBOutlet var daysLabelCollection: [UILabel]!
+    @IBOutlet weak var pickedDayLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         designDatePicker()
         designLabel()
+        loadDayDate()
     }
     
     func designDatePicker(){
@@ -34,6 +38,23 @@ class ViewController: UIViewController {
             label.textAlignment = .center
         }
     }
+    
+    func loadDayDate(){
+        if UserDefaults.standard.string(forKey: "save") != nil{
+            let loadDate = UserDefaults.standard.string(forKey: "save")
+            pickedDayLabel.text = (loadDate)!
+            for tag in 0...3{
+                let loadDate = UserDefaults.standard.string(forKey: "\(tag)")
+                daysLabelCollection[tag].text = (loadDate)!
+            }
+            
+        } else {
+            pickedDayLabel.text = "When is the anniversary?"
+            for tag in 0...3{
+                daysLabelCollection[tag].text = "\(tag)"
+            }
+        }
+    }
   
     func dateCal(_ days: Int, _ textTag: Int){
         let daysAfter = DateComponents(day: days)
@@ -45,15 +66,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func datePicked(_ sender: UIDatePicker) {
+        pickedDayLabel.text = "\(datePicker.date.formatted(date: .numeric, time: .omitted))"
         dateCal(99, 0)
         dateCal(199, 1)
         dateCal(299, 2)
         dateCal(364, 3)
     }
     
-
+    @IBAction func saveButtonTapped(_ sender: UIButton) {
+        UserDefaults.standard.set(pickedDayLabel.text!, forKey: "save")
+        for tag in 0...3{
+            UserDefaults.standard.set(daysLabelCollection[tag].text!, forKey: "\(tag)")
+            }
+    }
     
-    // 함수를 만들어 간소화
+    
+    // 함수를 만들어 간소화하기 전
     //    func dateCalculator(){
     //        let daysAfter100 = DateComponents(day: 99)
     //        let calendar = Calendar.current

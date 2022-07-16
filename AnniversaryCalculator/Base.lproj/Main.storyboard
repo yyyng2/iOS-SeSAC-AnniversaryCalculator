@@ -17,16 +17,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="bOm-O0-lh4">
-                                <rect key="frame" x="0.0" y="44" width="414" height="328"/>
+                                <rect key="frame" x="0.0" y="29.5" width="414" height="327.5"/>
                                 <connections>
                                     <action selector="datePicked:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ctz-lk-wU6"/>
                                 </connections>
                             </datePicker>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="2Sp-FO-XYh">
-                                <rect key="frame" x="20" y="392" width="374" height="164"/>
+                                <rect key="frame" x="20" y="367" width="374" height="163.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YB6-KY-H12">
-                                        <rect key="frame" x="0.0" y="0.0" width="166" height="164"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="166" height="163.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cake" translatesAutoresizingMaskIntoConstraints="NO" id="o9b-BW-i0r">
                                                 <rect key="frame" x="0.0" y="0.0" width="146" height="128"/>
@@ -50,7 +50,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y4v-4b-WOO">
-                                        <rect key="frame" x="208" y="0.0" width="166" height="164"/>
+                                        <rect key="frame" x="208" y="0.0" width="166" height="163.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="macaron" translatesAutoresizingMaskIntoConstraints="NO" id="9IZ-2y-91T">
                                                 <rect key="frame" x="0.0" y="0.0" width="146" height="128"/>
@@ -82,10 +82,10 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="7pc-gH-7QS">
-                                <rect key="frame" x="20" y="566" width="374" height="162"/>
+                                <rect key="frame" x="20" y="518" width="374" height="161.5"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PEy-8K-p8X">
-                                        <rect key="frame" x="0.0" y="0.0" width="166" height="162"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="166" height="161.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pudding" translatesAutoresizingMaskIntoConstraints="NO" id="UBc-yp-3Rx">
                                                 <rect key="frame" x="0.0" y="0.0" width="146" height="128"/>
@@ -109,7 +109,7 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G5V-QX-fO8">
-                                        <rect key="frame" x="208" y="0.0" width="166" height="162"/>
+                                        <rect key="frame" x="208" y="0.0" width="166" height="161.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="waffle" translatesAutoresizingMaskIntoConstraints="NO" id="gGf-U6-gQI">
                                                 <rect key="frame" x="0.0" y="0.0" width="146" height="128"/>
@@ -140,28 +140,48 @@
                                     <constraint firstItem="G5V-QX-fO8" firstAttribute="centerY" secondItem="PEy-8K-p8X" secondAttribute="centerY" id="rKx-Ha-6sT"/>
                                 </constraints>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9YZ-xZ-dxy">
+                                <rect key="frame" x="83" y="692" width="248" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lht-Yb-DFL">
+                                <rect key="frame" x="174" y="720" width="67" height="31"/>
+                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F21-wz-a3Z"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="2Sp-FO-XYh" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.2" id="8Ed-3K-wfN"/>
-                            <constraint firstItem="2Sp-FO-XYh" firstAttribute="top" secondItem="bOm-O0-lh4" secondAttribute="bottom" constant="20" id="9Ph-r6-NqQ"/>
+                            <constraint firstItem="2Sp-FO-XYh" firstAttribute="top" secondItem="bOm-O0-lh4" secondAttribute="bottom" constant="10" id="9Ph-r6-NqQ"/>
+                            <constraint firstItem="9YZ-xZ-dxy" firstAttribute="top" secondItem="7pc-gH-7QS" secondAttribute="bottom" constant="12.5" id="CO8-5L-whu"/>
                             <constraint firstItem="bOm-O0-lh4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Cxa-g6-DUk"/>
                             <constraint firstItem="7pc-gH-7QS" firstAttribute="height" secondItem="2Sp-FO-XYh" secondAttribute="height" multiplier="0.987805" id="DcH-dG-dvW"/>
                             <constraint firstItem="7pc-gH-7QS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="OID-I3-V7L"/>
                             <constraint firstItem="bOm-O0-lh4" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.4" id="T4e-TN-kF2"/>
-                            <constraint firstItem="bOm-O0-lh4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="X46-07-IJJ"/>
+                            <constraint firstItem="9YZ-xZ-dxy" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UFe-mW-0MP"/>
                             <constraint firstItem="2Sp-FO-XYh" firstAttribute="centerX" secondItem="bOm-O0-lh4" secondAttribute="centerX" id="ZB3-GG-QYD"/>
+                            <constraint firstItem="9YZ-xZ-dxy" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.6" id="b4j-EX-Yg4"/>
+                            <constraint firstItem="lht-Yb-DFL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bec-lE-Uoe"/>
                             <constraint firstItem="2Sp-FO-XYh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gCA-m6-EV2"/>
                             <constraint firstItem="2Sp-FO-XYh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="h37-Va-bM6"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7pc-gH-7QS" secondAttribute="bottom" id="jGu-iF-1K4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7pc-gH-7QS" secondAttribute="bottom" constant="182.5" id="jGu-iF-1K4"/>
                             <constraint firstItem="7pc-gH-7QS" firstAttribute="centerX" secondItem="2Sp-FO-XYh" secondAttribute="centerX" id="lIL-Dg-a3f"/>
+                            <constraint firstItem="lht-Yb-DFL" firstAttribute="top" secondItem="9YZ-xZ-dxy" secondAttribute="bottom" constant="8" id="oHo-PF-f5F"/>
                             <constraint firstItem="bOm-O0-lh4" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="tt1-IB-hub"/>
-                            <constraint firstItem="7pc-gH-7QS" firstAttribute="top" secondItem="2Sp-FO-XYh" secondAttribute="bottom" constant="10" id="wcs-FC-xa7"/>
+                            <constraint firstItem="7pc-gH-7QS" firstAttribute="top" secondItem="2Sp-FO-XYh" secondAttribute="bottom" constant="-12.5" id="wcs-FC-xa7"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="datePicker" destination="bOm-O0-lh4" id="KRU-gK-B75"/>
+                        <outlet property="pickedDayLabel" destination="9YZ-xZ-dxy" id="R2n-Yr-Sqr"/>
                         <outletCollection property="daysLabelCollection" destination="Hhj-AE-F9l" collectionClass="NSMutableArray" id="WC8-SU-Qif"/>
                         <outletCollection property="daysLabelCollection" destination="rE3-2x-8y0" collectionClass="NSMutableArray" id="GaN-oj-jjY"/>
                         <outletCollection property="daysLabelCollection" destination="RYp-hi-ClE" collectionClass="NSMutableArray" id="BK2-ga-hsk"/>
